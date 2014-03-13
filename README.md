@@ -11,3 +11,16 @@ Unity supports external version control, but its default settings aren't entirel
 * Force text serialization: Unity will now serialize scenes and prefabs in a text format, for easier diff+merge.
 
 I also include a `.gitignore` file that will skip over some of Unity's generated files.
+
+Use with SVN
+------------
+
+This template project should be fully compatible with Subversion, with the exception that SVN cannot source ignores from a file. You can set the `svn:ignore` property recursively by [using this command](http://stackoverflow.com/questions/17298668/svn-ignore-like-gitignore):
+
+    svn propset svn:ignore -RF ./.gitignore .
+    
+If you're on Subversion 1.8+ [you can instead use](http://stackoverflow.com/a/17254404/1251354) the new `svn:global-ignores` property:
+
+    svn propset svn:global-ignores -F ./.gitignore .
+    
+You should have to do this exactly once, when you first set up the project.
