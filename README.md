@@ -12,6 +12,17 @@ Unity supports external version control, but its default settings aren't entirel
 
 I also include a `.gitignore` file that will skip over some of Unity's generated files.
 
+How to use this
+---------------
+
+As simply as possible:
+
+1. Download the empty project with any of GitHub's "Download ZIP" buttons.
+2. Extract the ZIP somewhere on your machine.
+3. Rename the project folder.
+4. Run Unity. Go to `File > Open Project... > Open Other...`, browse to the empty project folder.
+5. Voila! You have a new Unity project.
+
 Use with SVN
 ------------
 
