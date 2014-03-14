@@ -1,0 +1,46 @@
+#############
+## OS files
+#############
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+
+####################
+## Generated files
+####################
+
+*.suo
+*.user
+*.sln.docstates
+*.csproj
+*.pidb
+*.sln
+*.unityproj
+*.userprefs
+
+##########################
+## Unity generated files - partially redundant to above, if you need to be more discriminating
+##########################
+
+#ONLY ignore library if using meta files (in EditorSettings.asset)
+Library
+Temp
+
+Assembly-CSharp*.csproj
+Assembly-UnityScript*.unityproj
+Unity3D*.sln
+
+*.pidb
+
+
+

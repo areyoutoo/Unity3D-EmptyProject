@@ -1,0 +1,5 @@
+This file exists so that Git recognizes an empty "Assets" folder.
+
+Unity won't recognize this as a project without that folder.
+
+You can safely delete this file once you've loaded the project into Unity.
