@@ -32,9 +32,12 @@ $RECYCLE.BIN/
 ## Unity generated files - partially redundant to above, if you need to be more discriminating
 ##########################
 
+# If applying recursively, you may want to skip "Library" and "Temp" below the
+# project root, so that your project itself can contain folders with those names
+#
 # ONLY ignore library if using meta files (in EditorSettings.asset)
-/Library
-/Temp
+Library
+Temp
 
 Assembly-CSharp*.csproj
 Assembly-UnityScript*.unityproj

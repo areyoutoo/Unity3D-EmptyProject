@@ -26,12 +26,21 @@ As simply as possible:
 Use with SVN
 ------------
 
-This template project should be fully compatible with Subversion, with the exception that SVN cannot source ignores from a file. You can set the `svn:ignore` property recursively by [using this command](http://stackoverflow.com/questions/17298668/svn-ignore-like-gitignore):
+This template project should be fully compatible with Subversion, with the exception that SVN cannot source its ignore list from a file. You can instead set the `svn:ignore` property:
 
-    svn propset svn:ignore -RF ./.gitignore .
-    
-If you're on Subversion 1.8+ [you can instead use](http://stackoverflow.com/a/17254404/1251354) the new `svn:global-ignores` property:
+    cd path/to/your/project
+    svn propset svn:ignore -F .svnignore .
 
-    svn propset svn:global-ignores -F ./.gitignore .
-    
+The `.svnignore` file is a close twin of `.gitignore`.
+
 You should have to do this exactly once, when you first set up the project.
+
+As far as keeping those files:
+
+* If you're using Git, you can delete `.svnignore`.
+* If you're using SVN, you can delete both `.gitignore` and `.svnignore` once you're done with them.
+
+Advanced SVN users might consider applying the property recursively (by passing `-R` to `propset` or with `svn:global-ignores`); if you go that route, consider ignoring `Library` and `Temp` only at the project root.
+    
+    
+
